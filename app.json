@@ -1,0 +1,25 @@
+{
+  "name": "MIR",
+  "description": "Meeting Involves Report, this app help you to manage that.",
+  "website": "http://bdeinsalyon.github.com/mir",
+  "success_url": "/",
+  "addons": ["heroku-postgresql"],
+  "env": {
+    "RAILS_ENV": "production",
+    "AZURE_CLIENT_ID": {
+      "description": "Microsoft Azure Client ID (oauth)",
+      "value": ""
+    },
+    "AZURE_CLIENT_SECRET": {
+      "description": "Microsoft Azure Client Secret (oauth)",
+      "value": ""
+    },
+    "AZURE_TENANT_ID": {
+      "description": "Microsoft Azure Tenant (Your O365 domain)",
+      "value": ""
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}
